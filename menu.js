@@ -1,5 +1,5 @@
 $(document).ready(function() {   
-
+loadPage(0);
 
 });
 
@@ -17,7 +17,6 @@ function accountFunc() {
         })
     } else {
         loadPage(4);
-        alert("Loading account page");
     }
 
 
