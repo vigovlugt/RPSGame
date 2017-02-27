@@ -1,11 +1,12 @@
 $(document).ready(function() {   
-alert("test");
+
+
 });
 
 
 function accountFunc() {
-
-    if (firebase.currentUser = null) {
+  console.log(firebase.currentUser)
+    if (firebase.currentUser == null) {
         <!-- if there is no user logged in-->
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider).then(function(result) {
@@ -24,7 +25,7 @@ function accountFunc() {
 
     firebase.auth().onAuthStateChanged(function(user) { 
         if (user) {   // User is signed in.
-            alert(firebase.auth().currentUser) 
+          console.log(user);
         } else {   // No user is signed in.
 
         }
