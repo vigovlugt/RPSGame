@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         // Initialize Firebase
          
@@ -46,31 +47,30 @@
         <div class="mdl-layout__drawer title">
             <span class="mdl-layout-title">RPSGame</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="javascript:Alert();"><i class="material-icons">home</i>Overview</a>
-                <a class="mdl-navigation__link" href="play.html"><i class="material-icons">play_circle_filled</i>Play</a>
-                <a class="mdl-navigation__link" href="friends.html"><i class="material-icons">supervisor_account</i>Friends</a>
-                <a class="mdl-navigation__link" href="inventory.html"><i class="material-icons">shopping_basket</i>Inventory</a>
+                <a class="mdl-navigation__link page" href="javascript:Alert();"><i class="material-icons">home</i>Overview</a>
+                <a class="mdl-navigation__link page" href="play.html"><i class="material-icons">play_circle_filled</i>Play</a>
+                <a class="mdl-navigation__link page" href="friends.html"><i class="material-icons">supervisor_account</i>Friends</a>
+                <a class="mdl-navigation__link page" href="inventory.html"><i class="material-icons">shopping_basket</i>Inventory</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
 
           <div class="page-content overview">
+          </div>
+
+          <div class="page-content page play">
 
           </div>
 
-          <div class="page-content play">
+          <div class="page-content page friends">
 
           </div>
 
-          <div class="page-content friends">
+          <div class="page-content page inventory">
 
           </div>
 
-          <div class="page-content inventory">
-
-          </div>
-
-          <div class="page-content account">
+          <div class="page-content page account">
 
           </div>
 
