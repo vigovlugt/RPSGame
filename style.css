@@ -21,13 +21,19 @@ body{
 }
 
 .demo-card-wide.mdl-card {
-  width: 300px;
+  width: 284px;
 }
 .demo-card-wide > .mdl-card__title {
   text-align:center;
-  color: #000;
-  height: 300px;
+  text-align:top;
+  color: #fff;
+  height: 250px;
   background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: grey;
+}
+#playopponent{
+  margin-bottom: 170px;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;

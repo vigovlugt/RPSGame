@@ -1,6 +1,10 @@
+var curUser;
+
 $(document).ready(function() {   
 loadPage(0);
 $( ".draggable" ).draggable();
+curUser = firebase.Auth().currentUser;
+alert(curUser);
 });
 
 function accountFunc() {
@@ -10,6 +14,7 @@ function accountFunc() {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider).then(function(result) {
             alert("logged in")
+
         }).catch(function(error) {
             // Handle Errors here.
             alert(error.message);
@@ -17,10 +22,7 @@ function accountFunc() {
     } else {
         loadPage(4);
     }
-
-
 }
-
 
 firebase.auth().onAuthStateChanged(function(user) { 
     if (user) {   // User is signed in.
@@ -33,4 +35,12 @@ firebase.auth().onAuthStateChanged(function(user) { 
 function loadPage(_page) {
     $(".page").hide();
     $("." + _page).show();
+}
+
+function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
 }
