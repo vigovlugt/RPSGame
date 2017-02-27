@@ -10,7 +10,7 @@ function accountFunc() {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider).then(function(result) {
             alert("logged in")
-
+            writeUserData();
         }).catch(function(error) {
             // Handle Errors here.
             alert(error.message);
@@ -33,10 +33,10 @@ function loadPage(_page) {
     $("." + _page).show();
 }
 
-function writeUserData(userId, name, email, imageUrl) {
-  firebase.database().ref('users/' + userId).set({
-    username: name,
-    email: email,
-    profile_picture : imageUrl
+function writeUserData() {
+  firebase.database().ref('users/' + firebase.auth().currentUser.uid).set({
+    username: firebase.auth().currentUser.displayName,
+    email: firebase.auth().currentUser.email,
+    profile_picture : firebase.auth().currentUser.photoURL
   });
 }
