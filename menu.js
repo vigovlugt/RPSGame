@@ -13,13 +13,14 @@ function accountFunc() {
         }).catch(function(error) {
                 // Handle Errors here.
                 alert(error.message);
-            } else {
+            })} else {
                 loadPage(4);
 
             }
 
 
-        });
+        }
+
 
     firebase.auth().onAuthStateChanged(function(user) { 
         if (user) {   // User is signed in.
@@ -28,9 +29,8 @@ function accountFunc() {
 
         }
     });
-}
 
-function loadPage(var _page) {
+function loadPage(_page) {
     $(".page").hide();
     switch (_page) {
         case 0:     // overview
@@ -39,7 +39,6 @@ function loadPage(var _page) {
         case 1:    // play
 
             break;
-
         case 2:     // friends
 
             break;
@@ -49,7 +48,6 @@ function loadPage(var _page) {
         case 4  :   // account
 
             break;
-
     }
 
 }
