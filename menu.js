@@ -1,8 +1,7 @@
 $(document).ready(function() {   
 loadPage(0);
-
+$( ".draggable" ).draggable();
 });
-
 
 function accountFunc() {
     console.log(firebase.auth().currentUser)

@@ -1,7 +1,5 @@
 body{
-  padding:0;
-  margin:0;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(217, 217, 244);
 }
 
 .demo-list-action {
@@ -15,10 +13,22 @@ body{
 }
 
 .demo-card-square>.mdl-card__title {
-    color: rgb(64, 64, 64);
+    color: white;
     background-color: grey;
 }
 .right{
   margin-left: 10;
+}
 
+.demo-card-wide.mdl-card {
+  width: 300px;
+}
+.demo-card-wide > .mdl-card__title {
+  text-align:center;
+  color: #000;
+  height: 300px;
+  background-repeat: no-repeat;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
