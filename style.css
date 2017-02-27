@@ -3,3 +3,22 @@ body{
   margin:0;
   background-color: rgb(238, 238, 238);
 }
+
+.demo-list-action {
+        width: 300px;
+}
+
+
+.demo-card-square .mdl-card {
+    width: 320px;
+    margin-top: 20px;
+}
+
+.demo-card-square>.mdl-card__title {
+    color: rgb(64, 64, 64);
+    background-color: grey;
+}
+.right{
+  margin-left: 10;
+
+}

@@ -5,8 +5,8 @@ $(document).ready(function() {   
 
 
 function accountFunc() {
-  console.log(firebase.currentUser)
-    if (firebase.currentUser == null) {
+  console.log(firebase.auth().currentUser)
+    if (firebase.auth().currentUser == null) {
         <!-- if there is no user logged in-->
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider).then(function(result) {
@@ -16,7 +16,7 @@ function accountFunc() {
                 alert(error.message);
             })} else {
                 loadPage(4);
-
+                alert("Loading account page");
             }
 
 

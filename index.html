@@ -47,36 +47,73 @@
         <div class="mdl-layout__drawer title">
             <span class="mdl-layout-title">RPSGame</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link page" href="javascript:Alert();"><i class="material-icons">home</i>Overview</a>
-                <a class="mdl-navigation__link page" href="play.html"><i class="material-icons">play_circle_filled</i>Play</a>
-                <a class="mdl-navigation__link page" href="friends.html"><i class="material-icons">supervisor_account</i>Friends</a>
-                <a class="mdl-navigation__link page" href="inventory.html"><i class="material-icons">shopping_basket</i>Inventory</a>
+                <a class="mdl-navigation__link" href="javascript:loadPage(0)"><i class="material-icons">home</i>Overview</a>
+                <a class="mdl-navigation__link" href="javascript:loadPage(1)"><i class="material-icons">play_circle_filled</i>Play</a>
+                <a class="mdl-navigation__link" href="javascript:loadPage(2)"><i class="material-icons">supervisor_account</i>Friends</a>
+                <a class="mdl-navigation__link" href="javascript:loadPage(3)"><i class="material-icons">shopping_basket</i>Inventory</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
 
-          <div class="page-content page overview">
+            <div class="page-content page overview">
 
-          <!-- HIER -->
-          <!-- HIER -->
 
-          </div>
 
-          <div class="page-content page play">
+                <div class="demo-card-square mdl-card mdl-shadow--2dp right">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Friends</h2>
+                    </div>
+                    <!--LIST-->
+                    <div class="demo-list-action mdl-list">
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              <i class="material-icons mdl-list__item-avatar">person</i>
+                              <span>Bryan Cranston</span>
+                            </span>
+                            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                        </div>
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              <i class="material-icons mdl-list__item-avatar">person</i>
+                              <span>Aaron Paul</span>
+                            </span>
+                            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                        </div>
+                        <div class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              <i class="material-icons mdl-list__item-avatar">person</i>
+                              <span>Bob Odenkirk</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+                              <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                          </span>
+                            <!--LIST-->
 
-          </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="javascript:loadPage(2)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">More Friends</a>
+                    </div>
+                </div>
 
-          <div class="page-content page friends">
 
-          </div>
+            </div>
 
-          <div class="page-content page inventory">
+            <div class="page-content page play">
 
-          </div>
+            </div>
 
-          <div class="page-content page account">
+            <div class="page-content page friends">
 
-          </div>
+            </div>
+
+            <div class="page-content page inventory">
+
+            </div>
+
+            <div class="page-content page account">
+
+            </div>
 
         </main>
     </div>
