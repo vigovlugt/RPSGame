@@ -14,7 +14,7 @@ function accountFunc() {
                 // Handle Errors here.
                 alert(error.message);
             } else {
-
+                loadPage(4);
 
             }
 
@@ -33,20 +33,20 @@ function accountFunc() {
 function loadPage(var _page) {
     $(".page").hide();
     switch (_page) {
-        case 0: // overview
-
-
-
+        case 0:     // overview
 
             break;
-        case 1: // play
-
-            break; // friends
-
-        case 2: // inventory
+        case 1:    // play
 
             break;
-        case 3: // account
+
+        case 2:     // friends
+
+            break;
+        case 3:     // inventory
+
+            break;
+        case 4  :   // account
 
             break;
 
