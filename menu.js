@@ -1,10 +1,6 @@
-var curUser;
-
 $(document).ready(function() {   
 loadPage(0);
 $( ".draggable" ).draggable();
-curUser = firebase.Auth().currentUser;
-alert(curUser);
 });
 
 function accountFunc() {
