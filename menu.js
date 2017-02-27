@@ -1,22 +1,24 @@
-
-
-
-
-
-const titles = document.getElementsByClassName('title');
 window.onload = function() {
-    titles[0].innerHTML = "tst"
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
 }
 
 
 function accountFunc() {
+
+  if(firebase.currentUser = null){
+    <!-- if there is no user logged in-->
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider).then(function(result) {
         alert("logged in")
   }).catch(function(error) {
     // Handle Errors here.
     alert(error.message);
+  }else{
+
+
+  }
+
+
   });
 
 
